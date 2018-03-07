@@ -52,6 +52,7 @@ public class WolframClient {
     }
     
     public void go(String query) {
+        query = query.replaceAll("[+]", "%2B");
         webView.loadUrl("http://m.wolframalpha.com/input/?i=" + query);
     }
     
